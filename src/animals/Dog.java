@@ -7,9 +7,19 @@ public class Dog {
     //Variables
     private String name;
 
+    private String breed;
+
     private int size;
 
     //Getters and Setters
+
+    public void setBreed(String breed){
+        this.breed = breed;
+    }
+
+    public String getBreed(){
+        return breed;
+    }
 
     public void setName(String name){
         this.name = name;
@@ -33,9 +43,10 @@ public class Dog {
     public Dog(){
 
     }
-    public Dog(String name, int size){
+    public Dog(String name, String breed, int size){
         this.name = name;
         this.size = size;
+        this.breed = breed;
     }
 
 

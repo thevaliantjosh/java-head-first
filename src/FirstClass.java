@@ -11,7 +11,7 @@ public class FirstClass {
 
         String name = "Fido";
 
-        Dog scrappy = new Dog("Scrappy",  25);
+        Dog scrappy = new Dog("Scrappy", "Border Collie",  25);
 
         int sizeOfScrappy = scrappy.getSize() -5;
 
