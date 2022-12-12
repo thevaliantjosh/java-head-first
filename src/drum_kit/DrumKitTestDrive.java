@@ -11,19 +11,26 @@ public class DrumKitTestDrive {
         //After I play the TopHat, It turns false
         //I want to play the Snare while the topHat is false
         //After I play the Snare, it turns false
+        //Looking for:
+        /*bang bang bang
+        * boom boom boom
+        * ding ding ding
+        * boom bam boom
+        * Repeated 5 times
+        *
+        * */
         while(count < 5){
             count++;
-            if(d.getSnare()){
-                d.playTopHat();
-                d.setSnare(false);
-            } else if (d.getSnare() == false) {
-                    d.playSnare();
-                    d.setTopHat(false);
-
+            if(!d.getSnare() || !d.getTopHat()){
+                d.setSnare(true);
+                d.setTopHat(true);
             } else {
-
                 d.playSnare();
                 d.setSnare(false);
+                d.playSnare();
+                d.playTopHat();
+                d.setTopHat(false);
+                d.playTopHat();
             }//end of if/elseif/else
         }//End of While loop
 
