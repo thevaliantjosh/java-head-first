@@ -42,7 +42,10 @@ public class Echo {
 
     }
 
-    public Echo(int count, String theOs)
+    public Echo(int count, String theOs){
+        this.count = count;
+        this.theOs = theOs;
+    };
 
 
     //Methods
@@ -51,8 +54,9 @@ public class Echo {
 
 
 
-    public void hello(){
-        System.out.println("hello");
+    public void hello(String theOs){
+
+        System.out.println("hello" + theOs);
     }
 
 }
