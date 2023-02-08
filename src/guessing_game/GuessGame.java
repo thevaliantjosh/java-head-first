@@ -5,12 +5,14 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Random;
 
 public class GuessGame {
-
+//GuessGame has three instance variables for the three Player objects
+    //Creating and assigning three Player Objects.
     Player p1 = new Player();
     Player p2 = new Player();
     Player p3 = new Player();
 
     public void startGame(){
+//Declare three variables to hold the three guesses the Player makes.
         int p1Guess = 0;
         int p2Guess = 0;
         int p3Guess = 0;
