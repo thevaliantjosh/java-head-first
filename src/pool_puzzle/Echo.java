@@ -55,8 +55,8 @@ public class Echo {
 
 
     public void hello(String theOs){
-
-        System.out.println("hello" + theOs);
+        String addTheOs = theOs;
+        System.out.println("hello" + addTheOs);
     }
 
 }

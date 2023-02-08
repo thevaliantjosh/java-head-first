@@ -4,15 +4,16 @@ public class EchoTestDrive {
     public static void main(String[] args) {
         Echo echo = new Echo();
 
-        echo.setCount(5);
+
 
 
         while(echo.getCount() < 5){
-            int theCount = echo.Count();
-            int numberOfOs = echo.getNumberOfOs();
-            String theOs = echo.getTheOs().repeat(numberOfOs);
-            echo.hello(theOs) ;
-            theCount--;
+            int theCount = echo.getCount();
+            echo.setNumberOfOs(theCount);
+            int theNumberOfOs = echo.getNumberOfOs();
+            String theOs = echo.getTheOs().repeat(theNumberOfOs);
+            echo.hello(theOs);
+
         }
     }
 
