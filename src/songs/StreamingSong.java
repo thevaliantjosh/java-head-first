@@ -86,12 +86,15 @@ public class StreamingSong {
     * */
     public static void play(double duration){
         //I want to change the float value and input the minutes and seconds like such 04:19
-        String[] numberAsString = String.valueOf(duration).split("\\.", 2);
-       double minutes = Double.parseDouble(numberAsString[0]);
-        System.out.println(minutes);
-        double seconds = Double.parseDouble((numberAsString[1]));
-        System.out.println(seconds);
-        System.out.printf("Playing Song for %s:%s%n", minutes, seconds);
+        //split('\\') is escaping the dot but splitting on a literal dot
+        String[] durationString = String.valueOf(duration).split("\\.");
+        //creating a new integer array with two elements/indexes
+        int[] durationArray = new int[2];
+        //assigning the value of the first index to the first split integer. and parsing that into a string
+       durationArray[0] = Integer.parseInt(durationString[0]);
+       //assigning the value of the second index to the second split integer. and parsing that integer into a string
+        durationArray[1] = Integer.parseInt(durationString[1]);
+        System.out.printf("Playing Song for %s:%s%n", durationArray[0], durationArray[1]);
     }
 
     public static void printDetails(String title, String artist){
