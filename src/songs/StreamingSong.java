@@ -83,6 +83,8 @@ public class StreamingSong {
     *
     * UPDATE: Could not figure out BigDecimal, so I'm going to try and use
     * DecimalFormatSymbols
+    *
+    * UPDATE: Figured out the solution is to split the double at the period, and treat those two integers as strings
     * */
     public static void play(double duration){
         //I want to change the float value and input the minutes and seconds like such 04:19
@@ -98,7 +100,7 @@ public class StreamingSong {
     }
 
     public static void printDetails(String title, String artist){
-        System.out.printf("This is %s by %s", title, artist);
+        System.out.printf("This is %s by %s%n", title, artist);
     }
 
 
